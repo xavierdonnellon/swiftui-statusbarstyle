@@ -1,4 +1,4 @@
 # swiftui-statusbarstyle
 Supports changing the UIStatusBarStyle with natural SwiftUI syntax. 
 
-<h>Usage</h>
+<h1>Usage</h1>
