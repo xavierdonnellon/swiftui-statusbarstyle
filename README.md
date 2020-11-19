@@ -6,14 +6,14 @@ Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
 In your App file, simply wrap your main view in a RootView.
 
 ```swift
-    @main
-    struct ProjectApp: App {     
-        var body: some Scene {
-            WindowGroup {
-                RootView {
-                    ContentView()
-                }
+@main
+struct ProjectApp: App {     
+    var body: some Scene {
+        WindowGroup {
+            RootView {
+                ContentView()
             }
         }
     }
+}
 ```
