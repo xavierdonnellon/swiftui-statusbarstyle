@@ -5,7 +5,6 @@ Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
 <h2>With new SwiftUI App Lifecycle</h2>
 In your App file: 
 <code>
-    
     @main
     struct ProjectApp: App {
         //The view you want your app to start on 
