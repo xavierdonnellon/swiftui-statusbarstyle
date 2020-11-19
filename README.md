@@ -5,8 +5,7 @@ Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
 ### With new SwiftUI App Lifecycle</h2>
 In your App file, simply wrap your main view in a RootView.
 
-<code>
-    
+```swift
     @main
     struct ProjectApp: App {     
         var body: some Scene {
@@ -17,4 +16,4 @@ In your App file, simply wrap your main view in a RootView.
             }
         }
     }
-</code>
+```
