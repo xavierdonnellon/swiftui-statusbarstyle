@@ -6,23 +6,17 @@ Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
 <b>In your App file:</b>
 
 <code>
-    
     @main
-    struct ProjectApp: App {
-  
-        //The view you want your app to start on 
-        var rootView: some View {
-            ContentView()
-            //add any necessary environment objects here 
-        }
-
-        var body: some Scene {
-            WindowGroup {
-                EmptyView()
-                    .onAppear {
-                        UIApplication.shared.setHostingController(rootView: AnyView(self.rootView))
-                    }
+struct DatingApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    var body: some Scene {
+        WindowGroup {
+            RootView {
+                ContentView()
             }
         }
     }
+}
 </code>
