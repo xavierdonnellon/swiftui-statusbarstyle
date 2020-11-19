@@ -10,7 +10,7 @@ In your App file, simply wrap your main view in a RootView.
 struct ProjectApp: App {     
     var body: some Scene {
         WindowGroup {
-            RootView {
+            <b>RootView</b> {
                 ContentView()
             }
         }
