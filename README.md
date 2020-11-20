@@ -1,20 +1,23 @@
 # swiftui-statusbarstyle
-Supports changing the UIStatusBarStyle with natural SwiftUI syntax. 
+Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
+
+### Instalation
+Simply add the ```StatusBarController.swift``` into your project.
 
 ## Usage
 ### With new SwiftUI App Lifecycle</h2>
-In your```swift @main``` App file, simply wrap your main view in a RootView.
+In your ```@main``` App file, simply wrap your main view in a ```RootView```.
 
 ```swift
 @main
 struct ProjectApp: App {     
     var body: some Scene {
         WindowGroup {
+            //wrap main view in RootView
             RootView {
                 //Put the view you want your app to present here
                 ContentView()
-                    //Set the status bar style here
-                    .statusBarStyle(.lightContent)
+                    //add necessary environment objects here 
             }
         }
     }
@@ -22,7 +25,7 @@ struct ProjectApp: App {
 ```
 
 ### With AppDelegate / SceneDelegate Lifecycle
-In your ```SceneDelegate.swift```, in your```swift scene``` function, simply wrap your main view in a ```RootView```. 
+In your ```SceneDelegate.swift```, in your```scene(_ scene: UIScene...)``` function, simply wrap your main view in a ```RootView```. 
 ```swift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -30,18 +33,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-            .environmentObject(TestObject())
+        //wrap main view in RootView
+        let contentView = RootView {
+            //Put the view you want your app to present here
+            ContentView()
+                //add necessary environment objects here 
+        }
 
-        // Use a UIHostingController as window root view controller.
+        //Rest of function is unchanged 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: RootView { contentView.statusBarStyle(.lightContent) })
+            window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }
     }
     
     //rest of default SceneDelegate goes unchanged...
+}
+```
+
+### Example
 
