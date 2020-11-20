@@ -1,7 +1,7 @@
 # swiftui-statusbarstyle
 Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
 
-### Instalation
+## Installation
 Simply add the ```StatusBarController.swift``` into your project.
 
 ## Usage
