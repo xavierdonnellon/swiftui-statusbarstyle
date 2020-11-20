@@ -1,7 +1,8 @@
 # swiftui-statusbarstyle
-Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
+Supports changing the Status Bar style with natural SwiftUI syntax.
 
-![](example.gif)
+<img src="example.gif" width="229" height="500"/>
+The status bar changes based on the view. 
 
 ## Installation
 Simply add the ```StatusBarController.swift``` file into your project.
@@ -56,5 +57,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 ```
 
 ### Example
-
+Use the ```.statusBarStyle(_ style: UIStatusBarStyle)``` method on a View.
+```swift
+struct ContentView: View {
+    var body: some View {
+        TabView {
+            //Tab  1 will have a light status bar
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+                .overlay(Text("Light Status Bar").foregroundColor(.white))
+                .statusBarStyle(.lightContent) //set status bar style here
+                .tabItem { Text("Tab 1") }
+            
+            //Tab 2 will have a dark status bar
+            Color.white
+                .edgesIgnoringSafeArea(.all)
+                .overlay(Text("Dark Status Bar"))
+                .statusBarStyle(.darkContent) //set status bar style here
+                .tabItem { Text("Tab 2") }
+        }
+    }
+}
+````
 
