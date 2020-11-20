@@ -1,8 +1,10 @@
 # swiftui-statusbarstyle
 Supports changing the UIStatusBarStyle with natural SwiftUI syntax.
 
+![](example.gif)
+
 ## Installation
-Simply add the ```StatusBarController.swift``` into your project.
+Simply add the ```StatusBarController.swift``` file into your project.
 
 ## Usage
 ### With new SwiftUI App Lifecycle</h2>
@@ -54,4 +56,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 ```
 
 ### Example
+
 
