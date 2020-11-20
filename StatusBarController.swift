@@ -1,8 +1,7 @@
 //
 //  StatusBarController.swift
-//  Dating App
-//
-//  Created by Xavier Donnellon on 11/5/20.
+//  Insert this into your project.
+//  Created by Xavier Donnellon
 //
 
 import SwiftUI
